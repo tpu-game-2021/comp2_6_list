@@ -213,5 +213,6 @@ namespace UnitTest
 			Assert::AreEqual(p->data, 1275);
 			Assert::IsNull(get_next(p));
 		}
+
 	};
 }
