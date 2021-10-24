@@ -50,12 +50,12 @@ namespace UnitTest
 		{
 			list lst;
 			initialize_list(&lst);
-
+			//l=lst=NULL
 			node n;
 			initialize_node(&n, 12);
-
+			//dataが１２,p=n
 			push_front(&lst, &n);
-
+			//list*l=lst,node*p=n
 			node* p = lst.header;
 			Assert::AreEqual((void*)&n, (void*)p);
 			Assert::AreEqual(p->data, 12);
