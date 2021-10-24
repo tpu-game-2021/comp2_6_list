@@ -14,6 +14,7 @@ void initialize_node(node* p, int val)
 // リストを初期化
 void initialize_list(list* l)
 {
+
 	l->header = NULL;
 }
 
@@ -22,12 +23,25 @@ void initialize_list(list* l)
 void push_front(list* l, node* p)
 {
 	// ToDo: リストにノードを追加するソースコードを実装する
+	if (l->header == NULL)l->header = p;
+	else {
+		p->pNext = l->header;
+		l->header = p;
+	}
+
+
 }
 
 // pの次のノードを削除
 void remove_next(list* l, node* p)
 {
 	// ToDo: リストからpで指定したノードの次のノードを削除する
+
+	if (p->pNext == NULL) { return 0; }
+
+	else {
+		p->pNext = p->pNext->pNext;
+	}
 }
 
 
